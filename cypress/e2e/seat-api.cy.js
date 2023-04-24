@@ -6,10 +6,11 @@ describe('API Automation', () => {
       headers: {
         accept: "application/json"
       }
-    }).then(response => {
-      cy.fixture('response').then((response) => {
-        for (let key in response) {
-          expect(response).to.have.property(key)
+    }).then(apiResponse => {
+      let body = apiResponse.body
+      cy.fixture('response').then((fileResponse) => {
+        for (let key in fileResponse) {
+          expect(body).to.have.property(key)
         }
       })
     })
