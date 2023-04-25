@@ -10,7 +10,13 @@ describe('API Automation', () => {
       let body = apiResponse.body
       cy.fixture('response').then((fileResponse) => {
         for (let key in fileResponse) {
-          expect(body).to.have.property(key)
+          if (typeof fileResponse[key] === 'object') {
+            for (let subkey in fileResponse[key]) {
+              expect(body[key]).to.have.property(subkey)
+            }
+          } else {
+            expect(body).to.have.property(key)
+          }
         }
       })
     })
