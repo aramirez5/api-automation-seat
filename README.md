@@ -39,6 +39,6 @@ npx cypress open
 Or you can run it headless using Chrome:
 
 ```sh
-# Start Cypress UI
+# Start Cypress with headless Chrome
 npm run tests-chrome
 ```

@@ -25,7 +25,6 @@ describe('API Automation', () => {
       }
     }).then(response => {
       let body = response.body
-  
       expect(body.owner.login).to.equal('seatcode')
     })
   })
