@@ -16,11 +16,28 @@ of two exercises: the first checks the API response keys and the second checks o
 
 ## Building and installation
 
-We need to install NodeJS. I used the version 18.14.2 
+We need to install NodeJS. Cypress supports:
+
+Node.js 14.x
+Node.js 16.x
+Node.js 18.x and above 
+
+I used the version 18.14.2:
 
 https://nodejs.org/en/blog/release/v18.14.2
 
 See [www.nodejs.org](https://nodejs.org/) for more information.
+
+If you are a Ubuntu user you can do the following:
+
+```sh
+sudo apt update
+sudo apt install nodejs
+node -v
+sudo apt install npm
+```
+
+If you need a specific version you can use [NVM](https://gndx.dev/blog/instalar-nvm-en-ubuntu-20-04/)
 
 Once Node installed, you must install Cypress. I used the version 12.10.0: 
 
