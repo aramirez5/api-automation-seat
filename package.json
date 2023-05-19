@@ -9,5 +9,8 @@
   "license": "ISC",
   "devDependencies": {
     "cypress": "^12.12.0"
+  },
+  "dependencies": {
+    "cypress-plugin-api": "^2.11.1"
   }
 }

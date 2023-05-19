@@ -1,6 +1,6 @@
-describe('API Automation', () => {
+describe('API Automation with Cypress plugin API', () => {
   it('Check the structure of the json', () => {
-    cy.request({
+    cy.api({
       method: "GET",
       url: "https://api.github.com/repositories/132619461",
       headers: {
@@ -23,7 +23,7 @@ describe('API Automation', () => {
   })
 
   it('Check for the presence of the word “seatcode” in the field “owner->login”', () => {
-    cy.request({
+    cy.api({
       method: "GET",
       url: "https://api.github.com/repositories/132619461",
       headers: {
